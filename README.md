@@ -1,4 +1,4 @@
-<img width="1039" height="374" alt="image" src="https://github.com/user-attachments/assets/565c4f48-4f25-4408-a49b-116e48dbcf6e" /># data-engineering-mlops
+# data-engineering-mlops
 
 ## USECASE-1 : Trigger Glue Job Using AWS Lambda
 
@@ -16,41 +16,31 @@
    
    <img width="1338" height="502" alt="image" src="https://github.com/user-attachments/assets/294eb66d-57b2-4a07-9341-8977ffce1f69" />
    
-   Create an IAM role for the Glue Job, and assign the following permissions : Allows Glue to call AWS services on your behalf.
+3. Create an IAM role for the Glue Job, and assign the following permissions : Allows Glue to call AWS services on your behalf.
    
    <img width="1319" height="403" alt="image" src="https://github.com/user-attachments/assets/365daf22-fc91-4acc-8a30-7854ee8f4a9f" />
 
-3. Now create a Lambda function
-   
-   And add the trigger : Only triggered when a user pushes a .csv file into the input bucket (only allow the "PUT" Event)
+4. Now create a Lambda function and add the trigger : Only triggered when a user pushes a .csv file into the input bucket (only allow the "PUT" Event)
    
    <img width="1119" height="554" alt="image" src="https://github.com/user-attachments/assets/0565caa1-7107-43a2-9fcd-05ac65392686" />
 
-   Add the IAM role for the Lambda function and assign the same permissions as attached to AWS Glue Job
-
-   Now deploy the code
+5. Add the IAM role for the Lambda function and assign the same permissions as attached to AWS Glue Job. Now deploy the code
 
    <img width="1064" height="458" alt="image" src="https://github.com/user-attachments/assets/f378e62f-5952-4f34-8668-934626c7b362" />
 
-   Now let us upload a .csv file in input S3 bucket
+6. Now let us upload a .csv file in input S3 bucket
 
   <img width="1016" height="316" alt="image" src="https://github.com/user-attachments/assets/13050c3b-ee9a-4ff1-9f52-7190b956716a" />
 
-  Now check if the GLue Job has executed
+7. Now check if the GLue Job has executed
 
   <img width="1322" height="607" alt="image" src="https://github.com/user-attachments/assets/c508f674-5c14-4c1d-9ceb-36476acc7937" />
 
-  Now check the target bucket, you should find a .json 
+8. Now check the target bucket, you should find a .json 
 
   <img width="1039" height="374" alt="image" src="https://github.com/user-attachments/assets/976e6cee-e5ae-4667-a4c0-64252ce8b8de" />
 
-
-
-
-
-   
-
-4. Check the logs via CloudWatch
+9. Check the logs via CloudWatch
    
    <img width="1307" height="509" alt="image" src="https://github.com/user-attachments/assets/45f190dc-d644-4cb4-b829-723553851a78" />
 
